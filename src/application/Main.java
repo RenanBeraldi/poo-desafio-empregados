@@ -39,6 +39,7 @@ public class Main {
             String nomeFuncionario = scanner.nextLine();
             System.out.print("Salario: ");
             Double salarioFuncionario = scanner.nextDouble();
+            System.out.println();
 
             Employee employee = new Employee(nomeFuncionario, salarioFuncionario);
 
@@ -54,7 +55,7 @@ public class Main {
         System.out.println("\n");
         System.out.println("FOLHA DE PAGAMENTO:");
         System.out.print("Departamento: " + department.getName());
-        System.out.println(" = R$ " + department.payroll());
+        System.out.printf(" = R$ %.2f%n", department.payroll());
         System.out.println("Pagamento realizado no dia " + department.getPayDay());
         System.out.println("Funcionarios: ");
         for (Employee employee : department.getEmployees()) {
