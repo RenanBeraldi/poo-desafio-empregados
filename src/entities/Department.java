@@ -55,25 +55,6 @@ public class Department {
         this.employees.remove(employee);
     }
 
-    @Override
-    public String toString() {
-        StringBuilder sb = new StringBuilder();
-        sb.append("Departamento ");
-        sb.append(name + "\n");
-        sb.append(" = R$ ");
-        sb.append(payroll() + "\n");
-        sb.append("Pagemento realizado no dia ");
-        sb.append(payDay + "\n");
-        sb.append("Funcionarios:");
-        for (Employee employee : employees) {
-            sb.append(employee.getName() + "\n");
-        }
-        sb.append("Para mais duvidas entrar em contato: ");
-        sb.append(address.getEmail());
-
-        return sb.toString();
-    }
-
     /**
      * This method calculates the department's payroll.
      * @return The sum of all employees salaries
